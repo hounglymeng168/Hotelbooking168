@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Booking Hotel</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/pickmeup.min.js"></script>
+    <script type="text/javascript" src="dist/handleCounter.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/pickmeup.css">
+    <link rel="stylesheet" type="text/css" href="css/handle-counter.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="dist/jquery.scrollUp.js"></script>
+     <script type="text/javascript" src="dist/demo.js"></script>
+
+    
+    
+    </head>
+    
+<body>
+    <header class="tm-header">
+        <nav class="tm-nav">
+       <div>
+            <ul>
+                <li class="tm-list"><a href="index.html">Home</a></li>
+                <li class="tm-list"><a href="room.html">Room</a></li>
+            </ul>    
+            </div>
+        </nav>
+    </header>
+    
+    
+    <section class="tm-main">
+           <p>Booking</p>
+    </section>
+    
+    
+    
+    <section class="tm-booking">
+    <form>
+<div class="tm-form1">
+    <input type="text" name="name" placeholder="Name">  
+    <input type="email" name="email" placeholder="E-mail"> 
+    <label  for="rooms" id="inlinelable"><br>Rooms</label>
+    <select name="Rooms" id="rooms">
+        <option value="luxurys">Apartment</option>
+        <option value="deluxs">Room 2 Beds</option>
+        <option value="premiers">Room 1 Bed</option>
+    </select> 
+
+
+<!--Number of Guest Block-->
+</div>
+    <div class="tm-num2" id="handleCounter2">      
+        <label for="number2">Number of Guests</label><br/>
+        <button type="button" class="counter-minus btn btn-primary">-</button>
+        <input type="text" name="number2" id="number2" value="1">
+            <button type="button" class="counter-plus btn btn-primary">+</button>
+    </div>
+<!--End Number of Guest Block-->
+
+
+<!--Check-in Date--> 
+<div class="tm-form1">
+  <div class="tm-form2"></div>
+  <label for="check-in-date">Check-in Date</label><br>
+  <input type="date" id="check-in-date" name="check-in-date" placeholder="Select a date">
+  <input type="submit" id="sub" value="Proceed">
+</div>
+<div id="thank-you-message" style="display: none;">Thank you!</div>
+
+<script>
+  $(function() {
+    $("#sub").click(function(event) {
+      event.preventDefault(); // Prevent default form submission
+      $("#thank-you-message").show(); // Show the thank you message
+    });
+  });
+</script>
+<!--End Check-in Date-->
+        </form>
+  </section>
+    
+
+<!-- Start Footer-->
+<footer class="tm-footer">
+    <div class="tm-us">
+    <p class="bold">About Us</p>
+    <p>At the heart of the bustling academic environment of the Royal University of Phnom Penh (RUPP) in Cambodia, a dynamic team of IT Engineering students is diligently working towards revolutionizing the way we book hotels. We are Yean Friend, a group of passionate individuals committed to bringing innovation to the hospitality industry.</p>    
+    </div>
+
+    <div class="tm-address">
+    <p class="bold">Address</p>
+    <p>St 278, PhnomPenh, Cambodia<br>
+        Telegram : +85568500601
+        <br>Email : bookinghotel@manager.com</p>    
+    </div>
+    <br/>
+</footer>
+<!-- Start Footer-->
+</body>
+</html>
